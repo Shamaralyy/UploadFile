@@ -3,6 +3,7 @@
 import UpLoad from '../pages/UpLoad/index'
 import SetFile from '../pages/SetFile/index'
 import Download from '../pages/Download/index'
+import File from '../pages/File/index'
 
 export default [
     {
@@ -16,5 +17,9 @@ export default [
     {
       path: '/download',
       element: <Download/>
+    },
+    {
+      path: '/file',
+      element: <File/>
     }
   ]

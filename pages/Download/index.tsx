@@ -1,10 +1,17 @@
 import React from 'react';
-import { Input, Button, Modal } from 'antd';
+import { useNavigate } from 'react-router-dom';
+import { Input, Button } from 'antd';
 import useValidate from '../../hooks/useValidate';
 import './index.css'
 
 const App: React.FC = () => {
-    const { password, iptStatus, changeIpt, ok } = useValidate(() => { }, () => { });
+    const { password, iptStatus, changeIpt, ok } = useValidate(successCallback, () => { });
+    const navigate = useNavigate();
+
+    function successCallback() {
+        navigate('/file')
+    }
+
     return (
         <>
             <p className='title'>提取文件：</p>

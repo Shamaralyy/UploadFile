@@ -37,7 +37,7 @@ function App() {
   }
 
   return (
-    <>
+    <div className="container">
       <Dragger {...props}>
         <p className="ant-upload-drag-icon">
           <InboxOutlined />
@@ -62,7 +62,7 @@ function App() {
         <Input className='ipt' status={iptStatus} placeholder="请输入密码……" value={password} onChange={e => changeIpt(e.target.value)} />
         <span className='tip'>{iptStatus && '密码不能为空'}</span>
       </Modal>
-    </>
+    </div>
   )
 }
 
